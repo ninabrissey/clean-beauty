@@ -1,4 +1,4 @@
-import Nav from './Nav/Nav';
+import Nav from '../Nav/Nav';
 import './App.css';
 
 const App = () => {
