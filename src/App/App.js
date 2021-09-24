@@ -27,12 +27,19 @@ const App = () => {
     <div className="app">
       <Switch>
         <Nav />
-        <Route to="/">
-          <HomePage />
-        </Route>
-        <Route to="/:id">
-          <MakeupContainer />
-        </Route>
+        <Route
+          to="/"
+          render={() => <HomePage onLoad={window.scrollTo(0, 0)} />}
+        />
+        <Route
+          to="/:id"
+          render={({ match }) => (
+            <MakeupContainer
+              id={match.params.id}
+              onLoad={window.scrollTo(0, 0)}
+            />
+          )}
+        />
       </Switch>
     </div>
   );
