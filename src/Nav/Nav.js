@@ -9,27 +9,27 @@ const Nav = () => {
       <img className="nav-logo" src={logo} alt="clean beauty logo" />
       <ul className="nav-links">
         <li>
-          <NavLink to="" className="nav-link">
+          <NavLink to="/eye" className="nav-link" id="eye">
             eye
           </NavLink>
         </li>
         <li>
-          <NavLink to="" className="nav-link">
+          <NavLink to="/face" className="nav-link" id="face">
             face
           </NavLink>
         </li>
         <li>
-          <NavLink to="" className="nav-link">
+          <NavLink to="/cheek" className="nav-link" id="cheek">
             cheek
           </NavLink>
         </li>
         <li>
-          <NavLink to="" className="nav-link">
+          <NavLink to="/lip" className="nav-link" id="lip">
             lip
           </NavLink>
         </li>
         <li>
-          <NavLink to="" className="nav-link">
+          <NavLink to="/nail" className="nav-link" id="nail">
             nail
           </NavLink>
         </li>
