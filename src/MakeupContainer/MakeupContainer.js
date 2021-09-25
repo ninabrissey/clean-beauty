@@ -12,10 +12,6 @@ const MakeupContainer = ({ id }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    getData('product_type=lipstick');
-  });
-
   const getData = async (path) => {
     try {
       const res = await fetch(
@@ -24,10 +20,15 @@ const MakeupContainer = ({ id }) => {
       const lipsticks = await res.json();
       setLips(lipsticks);
       console.log(lipsticks);
+      setIsLoading(false);
     } catch (error) {
       setError(error.message);
     }
   };
+
+  useEffect(() => {
+    getData('product_type=lipstick');
+  }, []);
 
   return <section></section>;
 };
