@@ -4,22 +4,26 @@ import MakeupCard from '../MakeupCard/MakeupCard';
 import './MakeupContainer.css';
 
 const MakeupContainer = ({ id }) => {
-  const [eyes, setEyes] = useState([]);
-  const [face, setFace] = useState([]);
-  const [lipstick, setLips] = useState([]);
-  const [cheeks, setCheeks] = useState([]);
-  const [nails, setNails] = useState([]);
+  const [blush, setBlush] = useState([]);
+  const [bronzer, setBronzer] = useState([]);
+  const [eyesbrows, setEyebrows] = useState([]);
+  const [eyeliner, setEyeliner] = useState([]);
+  const [eyeshadow, setEyeshadow] = useState([]);
+  const [foundation, setFoundation] = useState([]);
+  const [lipLiner, setLipLiner] = useState([]);
+  const [lipstick, setLipstick] = useState([]);
+  const [nailPolish, setNailPolish] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const getData = async (path) => {
+  const getMakeupByType = async (path, id) => {
     try {
       const res = await fetch(
         `http://makeup-api.herokuapp.com/api/v1/products.json?${path}`
       );
-      const lipsticks = await res.json();
-      setLips(lipsticks);
+      const makeupByType = await res.json();
       console.log(lipsticks);
+      [`set${id}`](makeupByType);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
@@ -27,8 +31,10 @@ const MakeupContainer = ({ id }) => {
   };
 
   useEffect(() => {
-    getData('product_type=lipstick');
-  }, []);
+    getMakeupByType(`product_type=${id}`);
+  }, [getMakeupByType]);
+
+  // [blush, bronzer, eyesbrows, eyeliner, eyeshadow, foundation, lipLiner, lipstick, nailPolish]
 
   return <section></section>;
 };
