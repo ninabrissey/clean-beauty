@@ -47,7 +47,11 @@ const Nav = ({ handleChange }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/categories/lipliner" className="nav-link" id="lipliner">
+          <NavLink
+            to="/categories/lip_liner"
+            className="nav-link"
+            id="lip_liner"
+          >
             lip liner
           </NavLink>
         </li>
@@ -63,9 +67,9 @@ const Nav = ({ handleChange }) => {
         </li>
         <li>
           <NavLink
-            to="/categories/nailpolish"
+            to="/categories/nail_polish"
             className="nav-link"
-            id="nailpolish"
+            id="nail_polish"
           >
             nail polish
           </NavLink>
