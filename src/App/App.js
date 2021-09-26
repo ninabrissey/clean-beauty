@@ -6,8 +6,8 @@ import './App.css';
 const App = () => {
   return (
     <div className="app">
+      <Nav />
       <Switch>
-        <Nav />
         {/* <Route
           exact
           path="/"
@@ -15,7 +15,7 @@ const App = () => {
         {/* /> */}
         <Route
           exact
-          path="/:id"
+          path="/categories/:id"
           render={({ match }) => (
             <MakeupContainer
               id={match.params.id}
