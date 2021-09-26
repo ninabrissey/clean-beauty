@@ -22,8 +22,11 @@ const MakeupContainer = ({ id }) => {
         `http://makeup-api.herokuapp.com/api/v1/products.json?${path}`
       );
       const makeupByType = await res.json();
-      console.log(lipsticks);
-      [`set${id}`](makeupByType);
+      const cleanMakeupByType = makeupByType.filter(
+        (makeup) => makeup.tag_list.length > 0
+      );
+      console.log(cleanMakeupByType);
+      [`set${id}`](cleanMakeupByType);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
