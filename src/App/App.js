@@ -6,18 +6,19 @@ import './App.css';
 const App = () => {
   return (
     <div className="app">
-      <Nav />
+      <Nav className="nav-main" />
       <Switch>
         {/* <Route
           exact
           path="/"
           render={() => <HomePage onLoad={window.scrollTo(0, 0)} />} */}
-        {/* /> */}
+        {/*> */}
         <Route
           exact
           path="/categories/:id"
           render={({ match }) => (
             <MakeupContainer
+              className="main"
               id={match.params.id}
               onLoad={window.scrollTo(0, 0)}
             />
@@ -25,6 +26,7 @@ const App = () => {
         />
         {/* <Route render={() => <NotFound />} /> */}
       </Switch>
+      <footer className="footer-main">FOOTER</footer>
     </div>
   );
 };
