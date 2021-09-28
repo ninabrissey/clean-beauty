@@ -9,8 +9,8 @@
 }
 
 .nav-links {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -18,5 +18,17 @@
 .nav-link {
   font-family: 'Mulish';
   text-decoration: none;
+  font-size: 1.2vw;
   color: black;
+}
+
+.nav-links li {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 7% 15% 7%;
+  padding: 5% 5% 10% 5%;
+}
+
+.nav-links li:hover {
+  background: #9d788b75;
 }
