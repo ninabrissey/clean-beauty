@@ -22,11 +22,11 @@ const MakeupCard = ({ makeup }) => {
     });
   }
   return (
-    <article>
-      <img src={image_link} alt={name} />
+    <article className="card">
+      <img className="card-img" src={image_link} alt={name} />
       <h3>{name}</h3>
-      <p>${price}</p>
-      <p>{description}</p>
+      {/* <p>${price}</p> */}
+      {/* <p>{description}</p> */}
       <div>{productColorDisplays}</div>
     </article>
   );
