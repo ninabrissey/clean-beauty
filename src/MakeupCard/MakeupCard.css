@@ -5,10 +5,11 @@
   font-size: 1.6vw;
   font-family: 'Mulish';
   border-radius: 10px;
+  transition: box-shadow 1000ms;
 }
 
-.card :hover {
-  box-shadow: none;
+.card:hover {
+  box-shadow: 12px 12px 10px #9d788b75;
 }
 
 .card-img {
