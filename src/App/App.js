@@ -1,7 +1,9 @@
 import { Switch, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+
 import MakeupContainer from '../MakeupContainer/MakeupContainer';
 import './App.css';
+import Footer from '../Footer/Footer';
 
 const App = () => {
   return (
@@ -26,7 +28,7 @@ const App = () => {
         />
         {/* <Route render={() => <NotFound />} /> */}
       </Switch>
-      <footer className="footer-main">FOOTER</footer>
+      <Footer />
     </div>
   );
 };
