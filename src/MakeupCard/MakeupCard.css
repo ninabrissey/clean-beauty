@@ -9,7 +9,7 @@
 }
 
 .card:hover {
-  box-shadow: 12px 12px 10px #9d788b75;
+  box-shadow: 0 0 10px 10px #9d788b75;
 }
 
 .card-img {
