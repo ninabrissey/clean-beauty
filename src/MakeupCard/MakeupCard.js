@@ -1,5 +1,11 @@
 import React from 'react';
 import alcoholFree from '.././assets/alcohol-free-logo.png';
+import crueltyFree from '.././assets/cruelty-free.png';
+import ewg from '.././assets/ewg-logo.png';
+import oilFree from '.././assets/oil-free-logo.png';
+import organic from '.././assets/organic-logo.png';
+import vegan from '.././assets/vegan-logo.png';
+
 import './MakeupCard.css';
 
 const MakeupCard = ({ makeup }) => {
@@ -29,12 +35,25 @@ const MakeupCard = ({ makeup }) => {
   });
 
   return (
-    <article className="card :hover ">
+    <article className="card">
       <img className="card-img" src={image_link} alt={name} />
       <h3>{name}</h3>
       {/* <p>${price}</p> */}
       {/* <p>{description}</p> */}
       {/* <div className="colors">{productColorDisplays}</div> */}
+      {tag_list.includes('Vegan') && <img className="tag-img" src={vegan} />}
+      {tag_list.includes('Organic') && (
+        <img className="tag-img" src={organic} />
+      )}
+      {tag_list.includes('oil free') && (
+        <img className="tag-img" src={oilFree} />
+      )}
+      {tag_list.includes('EWG Verified') && (
+        <img className="tag-img" src={ewg} />
+      )}
+      {tag_list.includes('cruelty free') && (
+        <img className="tag-img" src={crueltyFree} />
+      )}
       {tag_list.includes('alcohol free') && (
         <img className="tag-img" src={alcoholFree} />
       )}
