@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/clean-beauty-logo.png';
 import './Nav.css';
 
-const Nav = ({ handleChange }) => {
+const Nav = () => {
   return (
     <nav className="nav">
       <img className="nav-logo" src={logo} alt="clean beauty logo" />
