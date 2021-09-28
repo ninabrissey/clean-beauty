@@ -1,20 +1,22 @@
 import { Switch, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
-
+import LandingPage from '../LandingPage/LandingPage';
 import MakeupContainer from '../MakeupContainer/MakeupContainer';
-import './App.css';
 import Footer from '../Footer/Footer';
+import './App.css';
 
 const App = () => {
   return (
     <div className="app">
       <Nav className="nav-main" />
       <Switch>
-        {/* <Route
+        <Route
           exact
           path="/"
-          render={() => <HomePage onLoad={window.scrollTo(0, 0)} />} */}
-        {/*> */}
+          render={() => (
+            <LandingPage className="main" onLoad={window.scrollTo(0, 0)} />
+          )}
+        />
         <Route
           exact
           path="/categories/:id"
