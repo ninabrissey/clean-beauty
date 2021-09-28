@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid black;
+  height: 50vh;
+  min-height: auto;
+  width: 25vw;
+  font-size: 1.6vw;
+  font-family: 'Mulish';
+  border-radius: 10px;
+}
+
+.card-img {
+  margin-top: 10%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  width: 12vw;
+}
