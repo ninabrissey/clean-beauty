@@ -4,9 +4,9 @@ import './Search.css';
 const Search = ({ filterMakeup }) => {
   const [searchInput, setSearchInput] = useState('');
 
-  const clearSearchInput = () => {
-    setSearchInput('');
-  };
+  // const clearSearchInput = () => {
+  //   setSearchInput('');
+  // };
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -28,9 +28,9 @@ const Search = ({ filterMakeup }) => {
         onChange={(e) => handleChange(e)}
         autoComplete="off"
       />
-      <button className="clear-btn" type="submit" onClick={clearSearchInput}>
+      {/* <button className="clear-btn" type="submit" onClick={clearSearchInput}>
         clear
-      </button>
+      </button> */}
     </form>
   );
 };
