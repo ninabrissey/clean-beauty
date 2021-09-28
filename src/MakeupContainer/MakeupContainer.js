@@ -52,15 +52,6 @@ const MakeupContainer = ({ id }) => {
           return makeup;
         }
       }
-
-      // if (
-      //   makeup.brand.toLowerCase().includes(searchInput) ||
-      //   makeup.product_type.toLowerCase().includes(searchInput) ||
-      //   makeup.name.toLowerCase().includes(searchInput) ||
-      //   makeup.description.toLowerCase().includes(searchInput)
-      // ) {
-      //   return makeup;
-      // }
     });
     setFilteredMakeup(matchedMakeup);
   };
@@ -70,7 +61,7 @@ const MakeupContainer = ({ id }) => {
   });
   return (
     <section className="searchAndContainer">
-      <Search filterMakeup={filterMakeup} />
+      <Search filterMakeup={filterMakeup} category={id} />
       <section className="makeup-container">{makeupCards}</section>
     </section>
   );
