@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/clean-beauty-logo.png';
 import './Nav.css';
 
 const Nav = () => {
   return (
     <nav className="nav">
-      <img className="nav-logo" src={logo} alt="clean beauty logo" />
+      <Link to="/">
+        <img className="nav-logo" src={logo} alt="clean beauty logo" />
+      </Link>
       <ul className="nav-links">
         <li>
           <NavLink to="/categories/blush" className="nav-link" id="blush">
