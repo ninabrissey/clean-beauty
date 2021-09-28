@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import MakeupCard from '../MakeupCard/MakeupCard';
 import './MakeupContainer.css';
 
@@ -27,7 +27,10 @@ const MakeupContainer = ({ id }) => {
     getMakeupByType(id);
   }, [id]);
 
-  return <section></section>;
+  const makeupCards = makeupByType.map((makeup) => {
+    return <MakeupCard key={makeup.id} makeup={makeup} />;
+  });
+  return <section className="makeup-container">{makeupCards}</section>;
 };
 
 export default MakeupContainer;
