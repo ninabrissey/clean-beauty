@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import './Search.css';
 
-const Search = ({ filterMakeup }) => {
+const Search = ({ filterMakeup, category }) => {
   const [searchInput, setSearchInput] = useState('');
-
-  // const clearSearchInput = () => {
-  //   setSearchInput('');
-  // };
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -22,15 +18,12 @@ const Search = ({ filterMakeup }) => {
       <input
         className="search-bar"
         aria-label="search bar"
-        placeholder="Search..."
+        placeholder={`Search ${category.split('_').join(' ')}...`}
         name="searchInput"
         value={searchInput}
         onChange={(e) => handleChange(e)}
         autoComplete="off"
       />
-      {/* <button className="clear-btn" type="submit" onClick={clearSearchInput}>
-        clear
-      </button> */}
     </form>
   );
 };
