@@ -41,21 +41,23 @@ const MakeupCard = ({ makeup }) => {
       {/* <p>${price}</p> */}
       {/* <p>{description}</p> */}
       {/* <div className="colors">{productColorDisplays}</div> */}
-      {tag_list.includes('Vegan') && <img className="tag-img" src={vegan} />}
+      {tag_list.includes('Vegan') && (
+        <img className="tag-img" src={vegan} alt="vegan logo" />
+      )}
       {tag_list.includes('Organic') && (
-        <img className="tag-img" src={organic} />
+        <img className="tag-img" src={organic} alt="organic logo" />
       )}
       {tag_list.includes('oil free') && (
-        <img className="tag-img" src={oilFree} />
+        <img className="tag-img" src={oilFree} alt="oil free logo" />
       )}
       {tag_list.includes('EWG Verified') && (
-        <img className="tag-img" src={ewg} />
+        <img className="tag-img" src={ewg} alt="ewg logo" />
       )}
       {tag_list.includes('cruelty free') && (
-        <img className="tag-img" src={crueltyFree} />
+        <img className="tag-img" src={crueltyFree} alt="cruelty free logo" />
       )}
       {tag_list.includes('alcohol free') && (
-        <img className="tag-img" src={alcoholFree} />
+        <img className="tag-img" src={alcoholFree} alt="alcohol free logo" />
       )}
     </article>
   );
