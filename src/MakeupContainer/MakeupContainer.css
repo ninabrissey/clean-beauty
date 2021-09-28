@@ -1,0 +1,11 @@
+.searchAndContainer {
+  margin-top: 30%;
+}
+
+.makeup-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2em;
+}

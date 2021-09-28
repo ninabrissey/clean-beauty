@@ -1,0 +1,10 @@
+.tag-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-links img {
+  margin: 1%;
+  width: 5vw;
+}
