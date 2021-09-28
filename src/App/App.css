@@ -3,20 +3,22 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  height: 100vh;
 }
 
+/* 
 .nav-main {
-  height: auto;
   width: 100%;
-}
+  border: 2px solid blue;
+} */
 
-.main {
+/* .main {
   height: 60%;
   width: 100%;
+  border: 2px solid violet;
 }
 .footer-main {
   height: 15%;
   width: 100%;
   bottom: 0;
-}
+  border: 2px solid orange;
+} */
