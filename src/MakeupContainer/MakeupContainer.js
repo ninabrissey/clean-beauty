@@ -28,7 +28,7 @@ const MakeupContainer = ({ id }) => {
   }, [id]);
 
   const makeupCards = makeupByType.map((makeup) => {
-    return <MakeupCard key={makeup.id} makeup={makeup} />;
+    return <MakeupCard key={makeup.category + makeup.id} makeup={makeup} />;
   });
   return <section className="makeup-container">{makeupCards}</section>;
 };
