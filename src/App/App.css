@@ -1,3 +1,22 @@
 .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
+  height: 100vh;
+}
+
+.nav-main {
+  height: 20%;
+  width: 100%;
+}
+
+.main {
+  height: 80%;
+  width: 100%;
+}
+.footer-main {
+  height: 15%;
+  width: 100%;
+  bottom: 0;
 }
