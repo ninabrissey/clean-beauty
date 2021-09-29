@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import LoadingDisplay from '../LoadingDisplay/LoadingDisplay';
 import MakeupCard from '../MakeupCard/MakeupCard';
 import Search from '../Search/Search';
+import NotFound from '../NotFound/NotFound';
 import './MakeupContainer.css';
 
 const MakeupContainer = ({ id }) => {
@@ -13,6 +14,7 @@ const MakeupContainer = ({ id }) => {
 
   useEffect(() => {
     const getMakeupByType = async (id) => {
+      setError('');
       setIsLoading(true);
       try {
         const res = await fetch(
@@ -64,6 +66,7 @@ const MakeupContainer = ({ id }) => {
   return (
     <section className="makeup-container-wrapper">
       {isLoading && <LoadingDisplay />}
+      {error && <NotFound />}
       {!isLoading && <Search filterMakeup={filterMakeup} category={id} />}
       {!isLoading && (
         <section className="makeup-container">{makeupCards}</section>

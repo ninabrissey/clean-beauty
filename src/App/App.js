@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import LandingDisplay from '../LandingDisplay/LandingDisplay';
 import MakeupContainer from '../MakeupContainer/MakeupContainer';
 import Footer from '../Footer/Footer';
+import NotFound from '../NotFound/NotFound';
 import './App.css';
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
             />
           )}
         />
-        {/* <Route render={() => <NotFound />} /> */}
+        <Route render={() => <NotFound />} />
       </Switch>
       <Footer />
     </div>
