@@ -3,11 +3,11 @@ describe('Landing Page', () => {
     cy.visit('http://localhost:3000');
   });
 
-  it('Should be able to visit the page', () => {
+  it('should be able to visit the page', () => {
     cy.url().should('include', 'localhost:3000');
   });
 
-  it('Should be able to view elements displayed on the page', () => {
+  it('should be able to view elements displayed on the page', () => {
     cy.get('nav.nav')
       .find('img.nav-logo')
       .get('nav.nav')
@@ -21,7 +21,7 @@ describe('Landing Page', () => {
       .should('have.attr', 'alt');
   });
 
-  it('Should be able to click a makeup link and visit new page with items displayed', () => {
+  it('should be able to click a makeup link and visit new page with items displayed', () => {
     cy.intercept(
       'GET',
       'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush',
@@ -153,5 +153,7 @@ describe('Landing Page', () => {
       .contains('Multi Purpose Powder - Blush & Eye');
   });
 
-  it('should be able to click the ', () => {});
+  it('should be able to click the image link at the bottom of the page and navigate to a new page ', () => {
+    cy.get('div.tag-links').get('a.tag-link-organic').click();
+  });
 });
