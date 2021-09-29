@@ -11,11 +11,7 @@ const Search = ({ filterMakeup, category }) => {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-      }}
-    >
+    <form className="search-bar-form">
       <input
         className="search-bar"
         aria-label="search bar"
