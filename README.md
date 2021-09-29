@@ -47,7 +47,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 
 
 ### Preview
-
+![clean-beauty-gif](https://user-images.githubusercontent.com/80136642/135212651-837f9fcd-9228-4ba4-96d5-597c89af8856.gif)
 
 
 [Return to top](#clean-beauty)
