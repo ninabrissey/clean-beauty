@@ -1,0 +1,12 @@
+.not-found-container {
+  font-size: 1.6vw;
+  font-family: 'Mulish';
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.return-home-404 {
+  color: #1b6b36;
+}
