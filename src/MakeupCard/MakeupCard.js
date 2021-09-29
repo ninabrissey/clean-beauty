@@ -12,26 +12,10 @@ import './MakeupCard.css';
 const MakeupCard = ({ makeup }) => {
   const { id, name, image_link, tag_list } = makeup;
 
-  // let productColorDisplays = product_colors.map((color) => {
-  //   return (
-  //     <div
-  //       style={{
-  //         background: color.hex_value,
-  //         borderRadius: '50%',
-  //         height: '15px',
-  //         width: '15px',
-  //         margin: '1px',
-  //       }}
-  //       name={color.colour_name}
-  //     ></div>
-  //   );
-  // });
-
   return (
     <article className="card" id={id}>
       <img className="card-img" src={image_link} alt={name} />
       <h3>{name}</h3>
-      {/* <div className="colors">{productColorDisplays}</div> */}
       {tag_list.includes('Vegan') && (
         <img className="tag-img" src={vegan} alt="vegan logo" />
       )}
