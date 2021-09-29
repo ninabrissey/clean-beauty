@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { fetchMakeup } from '../apiCalls';
+import { cleanMakeup } from '../utils';
 import LoadingDisplay from '../LoadingDisplay/LoadingDisplay';
 import MakeupCard from '../MakeupCard/MakeupCard';
 import Search from '../Search/Search';
@@ -17,15 +19,12 @@ const MakeupContainer = ({ id }) => {
       setError('');
       setIsLoading(true);
       try {
-        const res = await fetch(
-          `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${id}`
-        );
+        const res = await fetchMakeup(id);
         const makeupData = await res.json();
-        const cleanMakeup = makeupData.filter(
-          (makeup) => makeup.tag_list.length > 0
-        );
-        setMakeupByType(cleanMakeup);
-        setFilteredMakeup(cleanMakeup);
+        console.log(makeupData);
+        const cleanedMakeup = cleanMakeup(makeupData);
+        setMakeupByType(cleanedMakeup);
+        setFilteredMakeup(cleanedMakeup);
         setIsLoading(false);
       } catch (error) {
         setError(error.message);
