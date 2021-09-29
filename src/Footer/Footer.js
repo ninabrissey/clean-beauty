@@ -12,6 +12,7 @@ const Footer = () => {
   return (
     <div className="tag-links">
       <a
+        className="tag-link-organic"
         href="https://www.usda.gov/topics/organic"
         target="_blank"
         rel="noreferrer"
