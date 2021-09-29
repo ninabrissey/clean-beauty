@@ -1,3 +1,10 @@
+.makeup-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .makeup-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

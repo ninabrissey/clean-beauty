@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
-import LandingPage from '../LandingPage/LandingPage';
+import LandingDisplay from '../LandingDisplay/LandingDisplay';
 import MakeupContainer from '../MakeupContainer/MakeupContainer';
 import Footer from '../Footer/Footer';
 import './App.css';
@@ -13,7 +13,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <LandingPage onLoad={window.scrollTo(0, 0)} />}
+          render={() => <LandingDisplay onLoad={window.scrollTo(0, 0)} />}
         />
         <Route
           exact

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import LoadingDisplay from '../LoadingDisplay/LoadingDisplay';
 import MakeupCard from '../MakeupCard/MakeupCard';
 import Search from '../Search/Search';
 import './MakeupContainer.css';
@@ -12,6 +13,7 @@ const MakeupContainer = ({ id }) => {
 
   useEffect(() => {
     const getMakeupByType = async (id) => {
+      setIsLoading(true);
       try {
         const res = await fetch(
           `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${id}`
@@ -60,9 +62,12 @@ const MakeupContainer = ({ id }) => {
     return <MakeupCard key={makeup.category + makeup.id} makeup={makeup} />;
   });
   return (
-    <section className="searchAndContainer">
-      <Search filterMakeup={filterMakeup} category={id} />
-      <section className="makeup-container">{makeupCards}</section>
+    <section className="makeup-container-wrapper">
+      {isLoading && <LoadingDisplay />}
+      {!isLoading && <Search filterMakeup={filterMakeup} category={id} />}
+      {!isLoading && (
+        <section className="makeup-container">{makeupCards}</section>
+      )}
     </section>
   );
 };

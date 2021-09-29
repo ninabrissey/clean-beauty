@@ -2,9 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 2.5%;
 }
 
 .tag-links img {
-  margin: 1%;
+  margin: 1vw;
   width: 5vw;
 }
