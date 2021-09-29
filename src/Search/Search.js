@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Search.css';
 
 const Search = ({ filterMakeup, category }) => {
@@ -29,3 +30,7 @@ const Search = ({ filterMakeup, category }) => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  searchInput: PropTypes.string,
+};

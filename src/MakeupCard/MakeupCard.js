@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import alcoholFree from '.././assets/alcohol-free-logo.png';
 import crueltyFree from '.././assets/cruelty-free.png';
 import ewg from '.././assets/ewg-logo.png';
@@ -9,37 +10,27 @@ import vegan from '.././assets/vegan-logo.png';
 import './MakeupCard.css';
 
 const MakeupCard = ({ makeup }) => {
-  const {
-    brand,
-    name,
-    price,
-    image_link,
-    description,
-    product_colors,
-    tag_list,
-  } = makeup;
+  const { id, name, image_link, tag_list } = makeup;
 
-  let productColorDisplays = product_colors.map((color) => {
-    return (
-      <div
-        style={{
-          background: color.hex_value,
-          borderRadius: '50%',
-          height: '15px',
-          width: '15px',
-          margin: '1px',
-        }}
-        name={color.colour_name}
-      ></div>
-    );
-  });
+  // let productColorDisplays = product_colors.map((color) => {
+  //   return (
+  //     <div
+  //       style={{
+  //         background: color.hex_value,
+  //         borderRadius: '50%',
+  //         height: '15px',
+  //         width: '15px',
+  //         margin: '1px',
+  //       }}
+  //       name={color.colour_name}
+  //     ></div>
+  //   );
+  // });
 
   return (
-    <article className="card">
+    <article className="card" id={id}>
       <img className="card-img" src={image_link} alt={name} />
       <h3>{name}</h3>
-      {/* <p>${price}</p> */}
-      {/* <p>{description}</p> */}
       {/* <div className="colors">{productColorDisplays}</div> */}
       {tag_list.includes('Vegan') && (
         <img className="tag-img" src={vegan} alt="vegan logo" />
@@ -64,3 +55,11 @@ const MakeupCard = ({ makeup }) => {
 };
 
 export default MakeupCard;
+
+MakeupCard.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string || null,
+  image_link: PropTypes.string || null,
+  product_colors: PropTypes.array || null,
+  tag_list: PropTypes.array || null,
+};
