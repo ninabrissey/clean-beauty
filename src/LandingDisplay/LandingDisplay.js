@@ -1,6 +1,6 @@
 import React from 'react';
-import './LandingPage.css';
 import landingPageStatement from '.././assets/clean-beauty-statement.png';
+import './LandingDisplay.css';
 
 const LandingPage = () => {
   return (
