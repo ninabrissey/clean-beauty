@@ -13,7 +13,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <LandingPage onLoad={window.scrollTo(0, 0)} />}
+          render={() => <LandingDisplay onLoad={window.scrollTo(0, 0)} />}
         />
         <Route
           exact
