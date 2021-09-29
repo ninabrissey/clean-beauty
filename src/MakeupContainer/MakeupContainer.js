@@ -21,7 +21,6 @@ const MakeupContainer = ({ id }) => {
       try {
         const res = await fetchMakeup(id);
         const makeupData = await res.json();
-        console.log(makeupData);
         const cleanedMakeup = cleanMakeup(makeupData);
         setMakeupByType(cleanedMakeup);
         setFilteredMakeup(cleanedMakeup);
