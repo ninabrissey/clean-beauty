@@ -55,8 +55,8 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 ---
 
 ### Organizational Tools
-#### - [Find Project Spec Here](https://frontend.turing.edu/projects/module-3/showcase.html)
-#### - [GitHub Project Board](https://github.com/ninabrissey/clean-beauty/projects/1)
+#### [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
+#### [GitHub Project Board](https://github.com/ninabrissey/clean-beauty/projects/1)
 
 ---
 
