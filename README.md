@@ -40,7 +40,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 - There is a 'page not found' which handles all paths that are not determined in the app and will help the user navigate back to the main page.
 
 
-### Future Features & Noteworthy Limitations
+### Future Features
 - A makeup details page that shows color options, average price, description of makeup, and optional places to purchase the makeup.
 - More tag images detailing the clean certifications that a makeup item has associated with it. 
 - Favoriting capabilities.
@@ -62,10 +62,10 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 
 <!-- ### Reflection
 
-<br> -->
+<br> 
 
 
-[Return to top](#clean-beauty)
+[Return to top](#clean-beauty) -->
 
 ---
 ### Contributors
