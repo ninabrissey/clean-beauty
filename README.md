@@ -65,9 +65,9 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | fetchAPI | npm Li
 <br> 
 
 
-[Return to top](#clean-beauty) -->
+[Return to top](#clean-beauty) 
 
----
+--- -->
 ### Contributors
 [Nina Brissey](https://github.com/ninabrissey) <br>
 
