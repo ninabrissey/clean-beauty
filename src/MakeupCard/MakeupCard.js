@@ -10,11 +10,11 @@ import vegan from '.././assets/vegan-logo.png';
 import './MakeupCard.css';
 
 const MakeupCard = ({ makeup }) => {
-  const { id, name, image_link, tag_list } = makeup;
+  const { id, name, api_featured_image, tag_list } = makeup;
 
   return (
     <article className="card" id={id}>
-      <img className="card-img" src={image_link} alt={name} />
+      <img className="card-img" src={api_featured_image} alt={name} />
       <h3>{name}</h3>
       {tag_list.includes('Vegan') && (
         <img className="tag-img" src={vegan} alt="vegan logo" />
@@ -43,7 +43,7 @@ export default MakeupCard;
 MakeupCard.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string || null,
-  image_link: PropTypes.string || null,
+  api_featured_image: PropTypes.string || null,
   product_colors: PropTypes.array || null,
   tag_list: PropTypes.array || null,
 };
