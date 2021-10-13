@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: cimg/base:2021.04
     steps:
-      - run: npm run cypress
+      - run: ./node_modules/.bin/cypress open
 
 orbs:
   node: circleci/node@4.7
