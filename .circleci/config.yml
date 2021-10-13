@@ -1,11 +1,16 @@
 version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/base:2021.04
+    steps:
+      - run: npm run cypress
 
 orbs:
   node: circleci/node@4.7
   cypress: cypress-io/cypress@1.28.0
 
 workflows:
-  sample:
+  build_and_test:
     jobs:
-      - cypress/run:
-        start: npm start
+      - test
