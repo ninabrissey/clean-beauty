@@ -1,14 +1,12 @@
 version: 2.1
-jobs: 
-  test:
-    steps:
-      -
+
 orbs:
   node: circleci/node@4.7
-  cypress: cypress-io/cypress@1.28.0
+  cypress: cypress-io/cypress@1.29.0
+  heroku: circleci/heroku@1.2.6
 
 workflows:
-  sample:
+  build:
     jobs:
-      - cypress/run:
-        start: npm start
+      - cypress/run
+      - heroku/deploy-via-git
